@@ -1,0 +1,161 @@
+{
+  "sklearn_version": "1.9.1",
+  "n_rows": 215,
+  "n_placed": 148,
+  "majority_baseline": 0.6884,
+  "features": {
+    "numeric": [
+      "ssc_p",
+      "hsc_p",
+      "degree_p",
+      "etest_p",
+      "mba_p"
+    ],
+    "categorical": [
+      "ssc_b",
+      "hsc_b",
+      "hsc_s",
+      "degree_t",
+      "workex",
+      "specialisation"
+    ]
+  },
+  "feature_ranges": {
+    "ssc_p": [
+      40.89,
+      89.4
+    ],
+    "hsc_p": [
+      37.0,
+      97.7
+    ],
+    "degree_p": [
+      50.0,
+      91.0
+    ],
+    "etest_p": [
+      50.0,
+      98.0
+    ],
+    "mba_p": [
+      51.21,
+      77.89
+    ]
+  },
+  "cv": {
+    "folds": 5,
+    "repeats": 10
+  },
+  "candidates": [
+    {
+      "model": "Logistic regression",
+      "accuracy_mean": 0.866,
+      "accuracy_std": 0.0487,
+      "precision_mean": 0.8887,
+      "precision_std": 0.0499,
+      "recall_mean": 0.924,
+      "recall_std": 0.0442,
+      "f1_mean": 0.9048,
+      "f1_std": 0.0342,
+      "roc_auc_mean": 0.9375,
+      "roc_auc_std": 0.0311
+    },
+    {
+      "model": "Gaussian naive Bayes",
+      "accuracy_mean": 0.8051,
+      "accuracy_std": 0.0503,
+      "precision_mean": 0.8516,
+      "precision_std": 0.0497,
+      "recall_mean": 0.872,
+      "recall_std": 0.0515,
+      "f1_mean": 0.8602,
+      "f1_std": 0.0362,
+      "roc_auc_mean": 0.8612,
+      "roc_auc_std": 0.0523
+    },
+    {
+      "model": "Linear SVM",
+      "accuracy_mean": 0.8693,
+      "accuracy_std": 0.0426,
+      "precision_mean": 0.8966,
+      "precision_std": 0.0464,
+      "recall_mean": 0.9187,
+      "recall_std": 0.0448,
+      "f1_mean": 0.9063,
+      "f1_std": 0.0308,
+      "roc_auc_mean": 0.9346,
+      "roc_auc_std": 0.0284
+    },
+    {
+      "model": "RBF SVM",
+      "accuracy_mean": 0.8423,
+      "accuracy_std": 0.0456,
+      "precision_mean": 0.8519,
+      "precision_std": 0.0496,
+      "recall_mean": 0.9375,
+      "recall_std": 0.0424,
+      "f1_mean": 0.8913,
+      "f1_std": 0.031,
+      "roc_auc_mean": 0.9173,
+      "roc_auc_std": 0.0389
+    },
+    {
+      "model": "Random forest",
+      "accuracy_mean": 0.8516,
+      "accuracy_std": 0.0467,
+      "precision_mean": 0.8609,
+      "precision_std": 0.0467,
+      "recall_mean": 0.9391,
+      "recall_std": 0.0417,
+      "f1_mean": 0.8972,
+      "f1_std": 0.0318,
+      "roc_auc_mean": 0.9185,
+      "roc_auc_std": 0.0453
+    }
+  ],
+  "chosen_model": "Logistic regression",
+  "selection_rule": "Simplest model whose mean CV accuracy is within one standard error (std / sqrt(folds)) of the best model.",
+  "out_of_fold": {
+    "labels": [
+      "Not placed",
+      "Placed"
+    ],
+    "confusion_matrix": [
+      [
+        49,
+        18
+      ],
+      [
+        12,
+        136
+      ]
+    ],
+    "report": {
+      "Not placed": {
+        "precision": 0.8033,
+        "recall": 0.7313,
+        "f1-score": 0.7656,
+        "support": 67.0
+      },
+      "Placed": {
+        "precision": 0.8831,
+        "recall": 0.9189,
+        "f1-score": 0.9007,
+        "support": 148.0
+      },
+      "macro avg": {
+        "precision": 0.8432,
+        "recall": 0.8251,
+        "f1-score": 0.8331,
+        "support": 215.0
+      },
+      "weighted avg": {
+        "precision": 0.8582,
+        "recall": 0.8605,
+        "f1-score": 0.8586,
+        "support": 215.0
+      }
+    },
+    "accuracy": 0.8605
+  }
+}
