@@ -29,6 +29,7 @@ Five classifiers were compared with 5-fold cross-validation repeated 10 times on
 Always guessing "Placed" would be right 68.8% of the time, so the models add real signal.
 
 Logistic regression, linear SVM, RBF SVM and random forest are **statistically tied**: the gaps between them are smaller than the fold-to-fold spread. The deployed model is the simplest one within one standard error of the best, which also gives calibrated probabilities and readable coefficients. Only naive Bayes is clearly worse.
+##DEMO : https://student-placement-prediction-mgvsgmf3g5tlmliwkf2ktu.streamlit.app/
 
 ## Quick start
 
